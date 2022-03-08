@@ -58,8 +58,12 @@ public class FirstTests {
         int group  = 933;
         String id = "123";
         String name = "Fineas";
-        assertEquals(service.saveStudent(id, name, group), 1);
+        assertEquals(service.saveStudent(id, name, group), 0);
     }
 
-    
+    @Test
+    public void addAssigment_successfully() {
+        assertEquals(service.saveTema("123", "SSVV", 4, 5),0);
+    }
+
 }
