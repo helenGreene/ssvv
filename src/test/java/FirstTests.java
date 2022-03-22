@@ -54,12 +54,11 @@ public class FirstTests {
     @AfterEach
     public void tearDown() throws IOException {
         Path file = Paths.get("src/test/resources/fisiere/Studenti.xml");
-        Files.write(file, Collections.singletonList("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><Entitati></Entitati>"), StandardCharsets.UTF_8);
+        Files.deleteIfExists(file);
         file = Paths.get("src/test/resources/fisiere/Teme.xml");
-        Files.write(file, Collections.singletonList("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><Entitati></Entitati>"), StandardCharsets.UTF_8);
+        Files.deleteIfExists(file);
         file = Paths.get("src/test/resources/fisiere/Note.xml");
-        Files.write(file, Collections.singletonList("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><Entitati></Entitati>"), StandardCharsets.UTF_8);
-
+        Files.deleteIfExists(file);
     }
 
     @Test
