@@ -28,9 +28,9 @@ public class FirstTests {
 
     @BeforeEach
     public void setUp() throws IOException {
-        String filenameStudent = "src/test/resources/fisiere/Studenti.xml";
-        String filenameTema = "src/test/resources/fisiere/Teme.xml";
-        String filenameNota = "src/test/resources/fisiere/Note.xml";
+        String filenameStudent = "./Studenti.xml";
+        String filenameTema = "./Teme.xml";
+        String filenameNota = "./Note.xml";
 
         Path studentFile = Files.createFile(Paths.get(filenameStudent));
         Files.write(studentFile, Collections.singletonList("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><Entitati></Entitati>"), StandardCharsets.UTF_8);
@@ -53,11 +53,11 @@ public class FirstTests {
 
     @AfterEach
     public void tearDown() throws IOException {
-        Path file = Paths.get("src/test/resources/fisiere/Studenti.xml");
+        Path file = Paths.get("./Studenti.xml");
         Files.deleteIfExists(file);
-        file = Paths.get("src/test/resources/fisiere/Teme.xml");
+        file = Paths.get("./Teme.xml");
         Files.deleteIfExists(file);
-        file = Paths.get("src/test/resources/fisiere/Note.xml");
+        file = Paths.get("./Note.xml");
         Files.deleteIfExists(file);
     }
 
