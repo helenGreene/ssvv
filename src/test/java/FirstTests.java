@@ -55,7 +55,7 @@ public class FirstTests {
     }
 
     @Test
-    public void addStudent_validStudentGroup() {
+    public void addStudent_validStudentGroup() { //1
         int group  = 933;
         String id = "123";
         String name = "Fineas";
@@ -68,7 +68,7 @@ public class FirstTests {
     }
 
     @Test
-    public void test_saveStudent_invalidGroupNe_negativeNumber() {
+    public void test_saveStudent_invalidGroupNe_negativeNumber() {//2
         int group  = -933;
         String id = "123";
         String name = "Eugen";
@@ -77,7 +77,7 @@ public class FirstTests {
     }
 
     @Test
-    public void test_saveStudent_invalidGroupNe_tooBigNumber() {
+    public void test_saveStudent_invalidGroupNe_tooBigNumber() { //3
         int group  = 9999933;
         String id = "123";
         String name = "Eugen";
@@ -85,7 +85,7 @@ public class FirstTests {
     }
 
     @Test
-    public void test_saveStudent_invalidId_missingId() {
+    public void test_saveStudent_invalidId_missingId() { //4
         int group  = 923;
         String id = "";
         String name = "Eugen";
@@ -93,7 +93,7 @@ public class FirstTests {
     }
 
     @Test
-    public void test_saveStudent_invalidId_idNull() {
+    public void test_saveStudent_invalidId_idNull() { //5
         int group  = 913;
         String id = null;
         String name = "Eugen";
@@ -101,7 +101,7 @@ public class FirstTests {
     }
 
     @Test
-    public void test_saveStudent_invalidName_missingName() {
+    public void test_saveStudent_invalidName_missingName() {//6
         int group  = 913;
         String id = "123";
         String name = "";
@@ -109,7 +109,7 @@ public class FirstTests {
     }
 
     @Test
-    public void test_saveStudent_invalidName_nameNull() {
+    public void test_saveStudent_invalidName_nameNull() {//7
         int group  = 913;
         String id = "123";
         String name = null;
