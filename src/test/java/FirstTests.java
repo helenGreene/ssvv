@@ -11,6 +11,7 @@ import validation.StudentValidator;
 import validation.TemaValidator;
 import validation.ValidationException;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -26,10 +27,17 @@ public class FirstTests {
     private Service service;
 
     @BeforeEach
-    public void setUp() {
+    public void setUp() throws IOException {
         String filenameStudent = "src/test/resources/fisiere/Studenti.xml";
         String filenameTema = "src/test/resources/fisiere/Teme.xml";
         String filenameNota = "src/test/resources/fisiere/Note.xml";
+
+        Path studentFile = Files.createFile(Paths.get(filenameStudent));
+        Files.write(studentFile, Collections.singletonList("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><Entitati></Entitati>"), StandardCharsets.UTF_8);
+        Path temaFile = Files.createFile(Paths.get(filenameTema));
+        Files.write(temaFile, Collections.singletonList("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><Entitati></Entitati>"), StandardCharsets.UTF_8);
+        Path notaFile = Files.createFile(Paths.get(filenameNota));
+        Files.write(notaFile, Collections.singletonList("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><Entitati></Entitati>"), StandardCharsets.UTF_8);
 
         StudentValidator studentValidator = new StudentValidator();
         TemaValidator temaValidator = new TemaValidator();
