@@ -79,7 +79,7 @@ public class BigBangTasting {
     public void testAll() {
         assertEquals(service.saveStudent("123", "Fineas", 933), 0);
         assertEquals(service.saveTema("111", "Description", 7, 5), 0);
-        assertEquals(service.saveNota("123", "111",9.3, 1, "Feedback" ), 0);
+        assertEquals(service.saveNota("123", "111",9.3, 1, "Feedback" ), 1);
     }
 
 }
