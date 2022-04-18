@@ -36,7 +36,7 @@ public abstract class AbstractCRUDRepository<ID, E extends HasID<ID>> implements
         }
         catch (ValidationException ve) {
             System.out.println("Entitatea nu este valida! \n"+ ve.getMessage());
-            return null;
+            return entity;
         }
     }
 
