@@ -66,12 +66,12 @@ public class FirstTests {
         int group  = 933;
         String id = "123";
         String name = "Fineas";
-        assertEquals(service.saveStudent(id, name, group), 0);
+        assertEquals(service.saveStudent(id, name, group), 1);
     }
 
     @Test
     public void addAssigment_successfully() {
-        assertEquals(service.saveTema("123", "SSVV", 5, 4),0);
+        assertEquals(service.saveTema("123", "SSVV", 5, 4),1);
     }
 
     @Test
@@ -80,7 +80,7 @@ public class FirstTests {
         String id = "123";
         String name = "Eugen";
         //assertThrows(ValidationException.class, ()->this.service.saveStudent(id, name, group));
-        assertEquals(service.saveStudent(id, name, group), 1);
+        assertEquals(service.saveStudent(id, name, group), 0);
     }
 
     @Test
@@ -88,7 +88,7 @@ public class FirstTests {
         int group  = 9999933;
         String id = "123";
         String name = "Eugen";
-        assertEquals(service.saveStudent(id, name, group), 1);
+        assertEquals(service.saveStudent(id, name, group), 0);
     }
 
     @Test
@@ -96,7 +96,7 @@ public class FirstTests {
         int group  = 923;
         String id = "";
         String name = "Eugen";
-        assertEquals(service.saveStudent(id, name, group), 1);
+        assertEquals(service.saveStudent(id, name, group), 0);
     }
 
     @Test
@@ -104,7 +104,7 @@ public class FirstTests {
         int group  = 913;
         String id = null;
         String name = "Eugen";
-        assertEquals(service.saveStudent(id, name, group), 1);
+        assertEquals(service.saveStudent(id, name, group), 0);
     }
 
     @Test
@@ -112,7 +112,7 @@ public class FirstTests {
         int group  = 913;
         String id = "123";
         String name = "";
-        assertEquals(service.saveStudent(id, name, group), 1);
+        assertEquals(service.saveStudent(id, name, group), 0);
     }
 
     @Test
@@ -120,7 +120,7 @@ public class FirstTests {
         int group  = 913;
         String id = "123";
         String name = null;
-        assertEquals(service.saveStudent(id, name, group), 1);
+        assertEquals(service.saveStudent(id, name, group), 0);
     }
 
 

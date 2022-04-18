@@ -59,30 +59,30 @@ public class AssignmentTests {
     @Test
     public void test_addAssignment_invalidId_fails() {
         var response = service.saveTema(null, null, 0, 0);
-        assertEquals(1, response);
+        assertEquals(0, response);
     }
 
     @Test
     public void test_addAssignment_invalidDescriere_fails() {
         var response = service.saveTema("1", null, 0, 0);
-        assertEquals(1, response);
+        assertEquals(0, response);
     }
 
     @Test
     public void test_addAssignment_invalidDeadline_fails() {
         var response = service.saveTema("2", "test", 0, 0);
-        assertEquals(1, response);
+        assertEquals(0, response);
     }
 
     @Test
     public void test_addAssignment_invalidStartline_fails() {
         var response = service.saveTema("3", "test", 3, 0);
-        assertEquals(1, response);
+        assertEquals(0, response);
     }
 
     @Test
     public void test_addAssignment_validParameters_succeeds() {
         var response = service.saveTema("4", "test", 3, 2);
-        assertEquals(0, response);
+        assertEquals(1, response);
     }
 }

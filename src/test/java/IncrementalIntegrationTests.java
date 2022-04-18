@@ -58,16 +58,16 @@ public class IncrementalIntegrationTests {
     @Test
     public void test_addStudent_successfully() {
         var result = service.saveStudent("1", "Eugen", 933);
-        assertEquals(0, result);
+        assertEquals(1, result);
     }
 
     @Test
     public void test_addAssignment_successfully() {
         var studentResult = service.saveStudent("1", "Eugen", 933);
-        assertEquals(0, studentResult);
+        assertEquals(1, studentResult);
 
         var result = service.saveTema("2", "Test Tema", 6, 4);
-        assertEquals(0, result);
+        assertEquals(1, result);
     }
 
     @Test
@@ -76,13 +76,13 @@ public class IncrementalIntegrationTests {
         final var assignmentId = "2";
 
         var studentResult = service.saveStudent(studentId, "Fineas", 933);
-        assertEquals(0, studentResult);
+        assertEquals(1, studentResult);
 
         var assignmentResult = service.saveTema(assignmentId, "Tema pentru testare", 6, 4);
-        assertEquals(0, assignmentResult);
+        assertEquals(1, assignmentResult);
 
         var result = service.saveNota(studentId, assignmentId, 5, 5, "Foarte bun, dar nu prea.");
-        assertEquals(0, result);
+        assertEquals(1, result);
     }
 
 }

@@ -61,13 +61,13 @@ public class BigBangTasting {
         int group  = 933;
         String id = "123";
         String name = "Fineas";
-        assertEquals(service.saveStudent(id, name, group), 0);
+        assertEquals(service.saveStudent(id, name, group), 1);
     }
 
     @Test
     public void test_addAssignment_invalidId_fails() {
         var response = service.saveTema(null, null, 0, 0);
-        assertEquals(1, response);
+        assertEquals(0, response);
     }
 
     @Test
@@ -77,9 +77,9 @@ public class BigBangTasting {
 
     @Test
     public void testAll() {
-        assertEquals(service.saveStudent("123", "Fineas", 933), 0);
-        assertEquals(service.saveTema("111", "Description", 7, 5), 0);
-        assertEquals(service.saveNota("123", "111",9.3, 1, "Feedback" ), 1);
+        assertEquals(service.saveStudent("123", "Fineas", 933), 1);
+        assertEquals(service.saveTema("111", "Description", 7, 5), 1);
+        assertEquals(service.saveNota("123", "111",9.3, 1, "Feedback" ), 0);
     }
 
 }
