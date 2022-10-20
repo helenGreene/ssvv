@@ -122,6 +122,11 @@ public class FirstTests {
         String name = null;
         assertEquals(service.saveStudent(id, name, group), 0);
     }
+    
+    @Test
+    public void testWhcihPassEveryTime() {
+        assertEquals(1,1);
+    }
 
 
 }
