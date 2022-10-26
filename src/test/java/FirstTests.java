@@ -1,4 +1,3 @@
-import domain.Student;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -9,9 +8,7 @@ import repository.StudentXMLRepository;
 import validation.NotaValidator;
 import validation.StudentValidator;
 import validation.TemaValidator;
-import validation.ValidationException;
 
-import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -124,7 +121,7 @@ public class FirstTests {
     }
     
     @Test
-    public void testWhcihPassEveryTime() {
+    public void testWhichPassEveryTime() {
         assertEquals(1,1);
     }
 
