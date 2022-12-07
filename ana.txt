@@ -5,7 +5,7 @@ Deadline: 7
 Feedback: done
 
 Tema: 2
-Nota: 7.5
+Nota: 7.6
 Predata in saptamana: 9
 Deadline: 8
 Feedback: done
