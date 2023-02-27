@@ -325,5 +325,16 @@ public class FirstTests {
     @Test
     public void testWhichPassEveryTime99() { assertEquals(1, 1); }
 
+    /*
+    * Python Script I used to generate those tests:
+    * print("Hello world")
+testStr1 = "@Test\npublic void testWhichPassEveryTime"
+testStr2 = "() { assertEquals(1, 1); }"
+finalTest = ""
+for i in range(100):
+    finalTest += testStr1+str(i)+testStr2+"\n"
+
+print(finalTest)
+    * */
 
 }
