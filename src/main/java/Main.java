@@ -6,12 +6,15 @@ import repository.*;
 import service.*;
 import validation.*;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.ObjectInputStream;
+import java.io.*;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.ProtocolException;
+import java.net.URL;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.Base64;
 
 public class Main {
     public static void main(String[] args) {
@@ -60,5 +63,14 @@ public class Main {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    public void anotherVulnerability() throws IOException {
+        String encoding = Base64.getEncoder().encodeToString(("login:passwd").getBytes("UTF-8"));
+        URL url = new URL("www.center.com");
+        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+        conn.setRequestMethod("POST");
+        conn.setDoOutput(true);
+        conn.setRequestProperty("Authorization", "Basic " + encoding); // Noncompliant
     }
 }
