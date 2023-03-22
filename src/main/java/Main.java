@@ -15,7 +15,7 @@ public class Main {
         Validator<Student> studentValidator = new StudentValidator();
         Validator<Tema> temaValidator = new TemaValidator();
         Validator<Nota> notaValidator = new NotaValidator();
-        String PASSWORD = "Welcome1";
+        String PASSWORD = "password";
 
         StudentXMLRepository fileRepository1 = new StudentXMLRepository(studentValidator, "studenti.xml");
         TemaXMLRepository fileRepository2 = new TemaXMLRepository(temaValidator, "teme.xml");
